@@ -24,6 +24,15 @@ public class ImportData {
             con.setAutoCommit(false);
             PreparedStatement pstm = null ;
             FileInputStream input = new FileInputStream("C://_example/file.xls");
+//          //for a loop that loops through the directory of files
+//            File dir = new File("/Users/myuserdirectory");
+//            File[] fileList = null;
+//            if(dir.isDirectory()){
+//                fileList = dir.listFiles();
+//                for(File file : fileList){
+//                    //put the rest of your code in this loop
+//                }
+
             POIFSFileSystem fs = new POIFSFileSystem( input );
             HSSFWorkbook wb = new HSSFWorkbook(fs);
             HSSFSheet sheet = wb.getSheetAt(0);
@@ -52,5 +61,11 @@ public class ImportData {
         }
 
     }
+
+
+    }
+
+
+}
 
 }
